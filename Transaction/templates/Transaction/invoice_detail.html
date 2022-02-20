@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'Transaction_Invoice_list' %}">
+    Invoice Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>TransactionStatus</td><td>{{ object.TransactionStatus }}</td></tr>
+    <tr><td>TID</td><td>{{ object.TID }}</td></tr>
+    <tr><td>CID</td><td>{{ object.CID }}</td></tr>
+    <tr><td>BID</td><td>{{ object.BID }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>TotalPrice</td><td>{{ object.TotalPrice }}</td></tr>
+    <tr><td>TransactionDate</td><td>{{ object.TransactionDate }}</td></tr>
+    <tr><td>BName</td><td>{{ object.BName }}</td></tr>
+    <tr><td>PTransactionMode</td><td>{{ object.PTransactionMode }}</td></tr>
+    <tr><td>PaymentStatus</td><td>{{ object.PaymentStatus }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

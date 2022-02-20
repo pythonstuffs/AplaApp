@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'Transaction_Order_list' %}">
+    Order Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>PName</td><td>{{ object.PName }}</td></tr>
+    <tr><td>OID</td><td>{{ object.OID }}</td></tr>
+    <tr><td>PUnit</td><td>{{ object.PUnit }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>TID</td><td>{{ object.TID }}</td></tr>
+    <tr><td>PID</td><td>{{ object.PID }}</td></tr>
+    <tr><td>PTotal</td><td>{{ object.PTotal }}</td></tr>
+    <tr><td>PPrice</td><td>{{ object.PPrice }}</td></tr>
+    <tr><td>PTotal</td><td>{{ object.PTotal }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

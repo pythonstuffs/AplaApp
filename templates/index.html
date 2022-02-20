@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="m-2"><h4>Country_State_List</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Country_State_List_Country_list' %}">Country Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Country_State_List_State_list' %}">State Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Country_State_List_City_list' %}">City Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Country_State_List_Locality_list' %}">Locality Listing</a></div>
+<div class="m-2"><h4>users</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'users_profile_list' %}">profile Listing</a></div>
+<div class="m-2"><h4>BusinessOwener</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'BusinessOwener_BusinessType_list' %}">BusinessType Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'BusinessOwener_storeprofile_list' %}">storeprofile Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'BusinessOwener_stroetiming_list' %}">stroetiming Listing</a></div>
+<div class="m-2"><h4>Product</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Product_Product_Category_list' %}">Product_Category Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Product_Product_SubCategory_list' %}">Product_SubCategory Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Product_Product_list' %}">Product Listing</a></div>
+<div class="m-2"><h4>Transaction</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Transaction_PaymentStatus_list' %}">PaymentStatus Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Transaction_Invoice_list' %}">Invoice Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Transaction_TransactionMode_list' %}">TransactionMode Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Transaction_TransactionStatus_list' %}">TransactionStatus Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Transaction_Order_list' %}">Order Listing</a></div>
+{% endblock %}

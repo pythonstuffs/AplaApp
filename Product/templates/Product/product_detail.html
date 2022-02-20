@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'Product_Product_list' %}">
+    Product Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>PName</td><td>{{ object.PName }}</td></tr>
+    <tr><td>PSellingPrice</td><td>{{ object.PSellingPrice }}</td></tr>
+    <tr><td>PAvailiblity</td><td>{{ object.PAvailiblity }}</td></tr>
+    <tr><td>PID</td><td>{{ object.PID }}</td></tr>
+    <tr><td>PDelivery</td><td>{{ object.PDelivery }}</td></tr>
+    <tr><td>PSubCategory</td><td>{{ object.PSubCategory }}</td></tr>
+    <tr><td>PActualPrice</td><td>{{ object.PActualPrice }}</td></tr>
+    <tr><td>PCategory</td><td>{{ object.PCategory }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>PUnit</td><td>{{ object.PUnit }}</td></tr>
+    <tr><td>BID</td><td>{{ object.BID }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>PMargin</td><td>{{ object.PMargin }}</td></tr>
+    <tr><td>POnBoardDate</td><td>{{ object.POnBoardDate }}</td></tr>
+    <tr><td>PImage</td><td>{{ object.PImage }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}
